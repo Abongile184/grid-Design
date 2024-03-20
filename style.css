@@ -1,0 +1,158 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type:none;
+}
+
+
+.container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto 4fr; /* Change the template columns to auto and 4fr */
+  gap: 4px;
+}
+
+.container div {
+  padding: 15px;
+  font-size: 32px;
+  font-family: Helvetica;
+  font-weight: bold;
+  color: white;
+}
+
+.header {
+  background-color: #393f4d;
+  grid-column: 1 / -1; /* This spans across both columns */
+  display: grid; /* Use grid */
+  grid-template-columns: auto 1fr; /* Two columns, first one auto-sized for logo, second one takes remaining space */
+  align-items: center; /* Align items vertically in the center */
+}
+
+.menu ul,
+.menu li {
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: middle; 
+  margin-left: 30px;
+}
+
+.logo {
+  text-align: left;
+}
+
+.menu {
+  text-align: right;
+  margin-left: 400px;
+
+}
+
+
+.menu ul {
+  display: grid; /* Use grid for the ul inside .menu */
+  grid-template-columns: repeat(4, auto); /* Create 4 equal-width columns */
+  gap: 20px; /* Add some gap between grid items */
+  justify-content: center; /* Center align the grid items horizontally */
+}
+
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 20px;
+  justify-content: space-evenly; /* Space items evenly apart */
+}
+
+.sidebar {
+  background-color: #FF7755;
+  display: grid; 
+  gap: 50px;
+  grid-column: 1; /* Set the sidebar to start from the first column */
+  grid-row: span 4; /* Span the sidebar across 4 rows */
+  min-width: 200px; /* Set a minimum width for the sidebar */
+  width: auto; /* Allow the sidebar to stretch when needed */
+}
+
+.sidebar .photo {
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  font-weight: normal;
+  border-radius: 10px;
+ 
+}
+
+
+.sidebar .side-content {
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.sidebar .photo,
+.sidebar .side-content {
+  display: grid;
+  place-items: center; /* Center the items both horizontally and vertically */
+  width: 85%; /* Allow child elements to stretch within the sidebar */
+}
+
+
+.nav {
+  background-color: #FF7755;
+  grid-column: 2; 
+  display:grid;
+}
+
+.nav ul li {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.article {
+  background-color: #bccbde;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(calc(33.33% - 15px), 1fr)); 
+  grid-column: 2; 
+  grid-template-rows: auto;
+}
+
+.article p {
+  font-size: 18px;
+  font-family: sans-serif;
+  color: white;
+  text-align: left;
+}
+
+.article .card {
+  background-color: #FFFFFF;
+  color: black;
+  text-align: center;
+  border: 2px solid #bccbde;
+  height: 200px; 
+}
+
+.card p {
+  color: black;
+  font-weight: normal;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.card .title {
+  font-size: 18px;
+  text-align: center;
+}
+
+.footer {
+  background-color: #393f4d;
+  grid-column: 1 / 3;
+}
+
+
+.footer p {
+  font-size: 13px;
+  font-weight: normal;
+
+}
