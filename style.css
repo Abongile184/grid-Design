@@ -10,7 +10,7 @@
 .container {
   text-align: center;
   display: grid;
-  grid-template-columns: auto 4fr; /* Change the template columns to auto and 4fr */
+  grid-template-columns: 1fr 4fr;
   gap: 4px;
 }
 
@@ -26,7 +26,7 @@
   background-color: #393f4d;
   grid-column: 1 / -1; /* This spans across both columns */
   display: grid; /* Use grid */
-  grid-template-columns: auto 1fr; /* Two columns, first one auto-sized for logo, second one takes remaining space */
+  grid-template-columns: 1fr 2fr;
   align-items: center; /* Align items vertically in the center */
 }
 
@@ -38,14 +38,13 @@
   margin-left: 30px;
 }
 
+
 .logo {
-  text-align: left;
+  justify-self: start;
 }
 
 .menu {
-  text-align: right;
-  margin-left: 400px;
-
+  align-self: center;
 }
 
 
@@ -112,10 +111,8 @@
 .article {
   background-color: #bccbde;
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 15px;
-  grid-template-columns: repeat(auto-fit, minmax(calc(33.33% - 15px), 1fr)); 
-  grid-column: 2; 
-  grid-template-rows: auto;
 }
 
 .article p {
